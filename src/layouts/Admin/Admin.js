@@ -28,8 +28,7 @@ import Sidebar from "components/Sidebar/Sidebar.js";
 import FixedPlugin from "components/FixedPlugin/FixedPlugin.js";
 
 import routes from "routes.js";
-
-import logo from "assets/img/react-logo.png";
+import acumen from "assets/img/acumen.png";
 
 var ps;
 
@@ -40,7 +39,7 @@ class Admin extends React.Component {
       activeColor: "blue",
       sidebarMini: true,
       opacity: 0,
-      sidebarOpened: false
+      sidebarOpened: false,
     };
   }
   componentDidMount() {
@@ -99,7 +98,7 @@ class Admin extends React.Component {
       this.setState({ opacity: 0 });
     }
   };
-  getRoutes = routes => {
+  getRoutes = (routes) => {
     return routes.map((prop, key) => {
       if (prop.collapse) {
         return this.getRoutes(prop.views);
@@ -117,7 +116,7 @@ class Admin extends React.Component {
       }
     });
   };
-  getActiveRoute = routes => {
+  getActiveRoute = (routes) => {
     let activeRoute = "Default Brand Text";
     for (let i = 0; i < routes.length; i++) {
       if (routes[i].collapse) {
@@ -137,7 +136,7 @@ class Admin extends React.Component {
     }
     return activeRoute;
   };
-  handleActiveClick = color => {
+  handleActiveClick = (color) => {
     this.setState({ activeColor: color });
   };
   handleMiniClick = () => {
@@ -155,20 +154,20 @@ class Admin extends React.Component {
       message: notifyMessage,
       type: "primary",
       icon: "tim-icons icon-bell-55",
-      autoDismiss: 7
+      autoDismiss: 7,
     };
     this.refs.notificationAlert.notificationAlert(options);
     document.body.classList.toggle("sidebar-mini");
   };
   toggleSidebar = () => {
     this.setState({
-      sidebarOpened: !this.state.sidebarOpened
+      sidebarOpened: !this.state.sidebarOpened,
     });
     document.documentElement.classList.toggle("nav-open");
   };
   closeSidebar = () => {
     this.setState({
-      sidebarOpened: false
+      sidebarOpened: false,
     });
     document.documentElement.classList.remove("nav-open");
   };
@@ -197,7 +196,7 @@ class Admin extends React.Component {
           logo={{
             outterLink: "https://acumen-alpha.netlify.app/",
             text: "Acumen",
-            imgSrc: logo
+            imgSrc: acumen,
           }}
           closeSidebar={this.closeSidebar}
         />
@@ -217,11 +216,13 @@ class Admin extends React.Component {
             {this.getRoutes(routes)}
             <Redirect from="*" to="/admin/dashboard" />
           </Switch>
-          {// we don't want the Footer to be rendered on full screen maps page
-          this.props.location.pathname.indexOf("full-screen-map") !==
-          -1 ? null : (
-            <Footer fluid />
-          )}
+          {
+            // we don't want the Footer to be rendered on full screen maps page
+            this.props.location.pathname.indexOf("full-screen-map") !==
+            -1 ? null : (
+              <Footer fluid />
+            )
+          }
         </div>
         <FixedPlugin
           activeColor={this.state.activeColor}

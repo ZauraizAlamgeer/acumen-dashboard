@@ -173,23 +173,6 @@ class Users extends Component {
             <h2 className="text-center">User Collection</h2>
             <p className="text-center">
               A powerful react plugin handcrafted by our friends from{" "}
-              <a
-                href="https://react-table.js.org/#/story/readme"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                react-table
-              </a>
-              . It is a highly flexible tool, based upon the foundations of
-              progressive enhancement on which you can add advanced interaction
-              controls. Please check out their{" "}
-              <a
-                href="https://react-table.js.org/#/story/readme"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                full documentation.
-              </a>
             </p>
           </Col>
           <Row className="mt-5">
