@@ -195,7 +195,7 @@ class Admin extends React.Component {
           activeColor={this.state.activeColor}
           logo={{
             outterLink: "https://acumen-alpha.netlify.app/",
-            text: "Acumen",
+            text: "Acumen Investors",
             imgSrc: acumen,
           }}
           closeSidebar={this.closeSidebar}
