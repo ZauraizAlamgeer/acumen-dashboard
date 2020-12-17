@@ -44,6 +44,7 @@ import Rtl from "views/pages/Rtl.js";
 import Lock from "views/pages/Lock.js";
 import Blogs from "views/pages/Blogs.js";
 import Users from "views/pages/Users";
+import SignUp from "views/pages/SignUp";
 
 const routes = [
   {
@@ -67,6 +68,13 @@ const routes = [
     icon: "tim-icons icon-single-copy-04",
     component: Blogs,
     layout: "/admin"
+  },
+  {
+    path:"/sigh-up",
+    name:"Sign Up",
+    icon: "tim-icons icon-single-copy-04",
+    component:SignUp,
+    layout:"/auth"
   },
   {
     collapse: true,

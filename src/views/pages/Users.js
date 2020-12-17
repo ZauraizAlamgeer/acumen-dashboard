@@ -170,9 +170,9 @@ class Users extends Component {
       <>
         <div className="content">
           <Col md={8} className="ml-auto mr-auto">
-            <h2 className="text-center">User Collection</h2>
+            <h2 className="text-center">Acumen Users</h2>
             <p className="text-center">
-              A powerful react plugin handcrafted by our friends from{" "}
+              Acumen Investor's Collection
             </p>
           </Col>
           <Row className="mt-5">

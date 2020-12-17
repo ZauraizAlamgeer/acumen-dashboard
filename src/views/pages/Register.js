@@ -57,7 +57,7 @@ class Register extends React.Component {
                     <i className="tim-icons icon-wifi" />
                   </div>
                   <div className="description">
-                    <h3 className="info-title">Marketing</h3>
+                    <h3 className="info-title">Register Your Account</h3>
                     <p className="description">
                       We've created the marketing campaign of the website. It
                       was a very interesting collaboration.
